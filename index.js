@@ -12,6 +12,7 @@ try {
 if (!fs.existsSync(FILE)) {
 fs.writeFileSync(FILE, JSON.stringify({ count: 0 }));
 }
+
 const data = fs.readFileSync(FILE);
 return JSON.parse(data).count;
 } catch (err) {
